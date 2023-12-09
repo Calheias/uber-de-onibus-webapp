@@ -18,36 +18,7 @@
 </head>
 <body>
     {% component "header" %}
-    <div class="container" style= "text-align: center; margin-top: 20px; margin-bottom: 20px;">
-        <h4 style="color: #171D25; margin-bottom: 30px;">Você possui algum cupom</h4>
-        <h5 style="color: #FF7F0A; margin-bottom: 30px;">Digite ou selecione o seu cupom </h5>
-    <div style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <div style="background-color: #FFFFFF; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-            <h2>Cartões de Crédito</h2>
-            <form method="post">
-                {% csrf_token %}
-                <label for="cardholder_name" style="margin-top: 10px;">Nome do Titular...</label>
-                <input type="text" id="cardholder_name" name="cardholder_name" style="padding: 8px; margin-bottom: 10px;" required>
-    
-                <label for="cpf" style="margin-top: 10px;">CPF...</label>
-                <input type="text" id="cpf" name="cpf" style="padding: 8px; margin-bottom: 10px;" required>
-    
-                <label for="card_number" style="margin-top: 10px;">Número do Cartão...</label>
-                <input type="text" id="card_number" name="card_number" style="padding: 8px; margin-bottom: 10px;" required>
-    
-                <label for="card_expiration" style="margin-top: 10px;">MM/AA</label>
-                <input type="text" id="card_expiration" name="card_expiration" style="padding: 8px; margin-bottom: 10px;" required>
-
-                <label for="cvc" style="margin-top: 10px;">CVC</label>
-                <input type="text" id="cvc" name="cvc" style="padding: 8px; margin-bottom: 10px;" required>
-
-                <label for="times" style="margin-top: 10px;">Parcelamento...</label>
-                <input type="text" id="times" name="times" style="padding: 8px; margin-bottom: 10px;" required>
-    
-                <button type="submit" style="background-color: #007BFF; color: #fff; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">Finalizar Compra</button>
-            </form>
-        </div>
-    </div>
+    {% component "pagamento-transferencia" %}
     {% component "footer" %}
 </body>
 </html>
